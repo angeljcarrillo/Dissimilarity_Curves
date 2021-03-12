@@ -4,7 +4,7 @@ clc
   
 %% CHANGE TO YOUR LOCAL PATH
 %% PATH = LOCAL PATH+ \Demo\MPEG7CS\MPEG7CS_C\
-path='E:\Matlab\MATLAB\Doctorado\SIMILARITY\Demo\MPEG7CS\MPEG7CS_C\'; 
+path='...\Demo\MPEG7CS\MPEG7CS_C\'; 
 dirListing = dir(path);
 for i=1:length(dirListing) 
 Data{i}=dirListing(i,1).name; 
@@ -17,6 +17,11 @@ ID={};
 SCC={};
 TAU={};
 ACC={};
+
+%% GENERATE TEST DATA 60 IMAGE, 3 CLASSES
+f=f(:,1:60);
+%% GENERATE TEST DATA 40 IMAGE, 2 CLASSES
+%f=f(:,1:40);
 %% LOAD IMAGE, TEST ACC =2 OR -2, TORTUOSITY
 for i=1:1:length(f)
     s=load(f{:,i});
@@ -30,39 +35,17 @@ for i=1:1:length(f)
     ACC={ACC{:,:} acc};
     SCC={SCC{:,:} scc};
     close_curve={close_curve{:,:} pointlist};
-    
+    %% SHOW CONTOURS WITH EQUAL SEGMNETS
 %     figure(1)
 %     plot(pointlist(:,1),pointlist(:,2),'',pointlist(:,1),pointlist(:,2),'b*')
 %     pause(1)
 %% ID NAME   
      id = strsplit(f{:,i},'\');
-     ID={ID{:,:} id(1,end)}; 
-%      disp(ID{:,i})
+     ID={ID{:,:} id(1,end)}; %      
 end
-
-%% AVAILABLE TO BE CHOSEN 
-% puntosT={};
-% esccT={};
-% for h=1:1:length(close_curve)
-%     ptD=close_curve{:,h};
-%     %%
-%     ptD(end,:)=[];
-%     temp=ESCCFC(ptD,1);   
-%     %%
-%     NewP=temp{1,2};
-%     NewP=[NewP; NewP(1,:)];
-%     puntosT={puntosT{:,:} NewP};
-%     esccT={puntosT{:,:} temp{1,1}}; 
-% end
-puntosT=close_curve;
- % BUSCAR MAXIMO DE SEG
-%  seg=[];
-%  for i=1:1:length(puntosT)     
-%       seg=[seg(:,:) length(puntosT{:,i})];    
-%  end
-% maxS=max(seg);
+puntosT=close_curve; 
 maxS=81;
-%  % NORMALIZAR SEG
+%% NORMALIZAR SEG
 %  vec=puntosT;
 % for u=1:1:length(puntosT)
 %    vec{:,u}=optimazeCurve(maxS,puntosT{:,u}); %
@@ -75,16 +58,12 @@ maxS=81;
 
 %% DISSIMILARITY 
 %% ALPHA VALUE
-alpha=1;
+alpha=.5;
 J=dissimilarityFC(close_curve,alpha,maxS,3); 
 %% (VECTOR OF CURVES, ALPHA, SEGMENTS, ACCURACY ON CHAIN CODE)
 h = heatmap(J);
-% xvalues = {'(a)','(b)','(c)','(d)','(e)','(f)','(g)','(h)','(i)'};
-% yvalues = {'(a)','(b)','(c)','(d)','(e)','(f)','(g)','(h)','(i)'};
-% h = heatmap(xvalues,yvalues,J);
-
 h.Title = 'Dissimilarity';
-h.XLabel = 'Chi Values';
+h.XLabel = 'Dissimilarity Values';
 h.YLabel = strcat('Alpha=',string(alpha));
 
 

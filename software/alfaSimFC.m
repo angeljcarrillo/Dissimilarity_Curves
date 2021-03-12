@@ -22,21 +22,21 @@ vASC=subCA{:,2};
 %% VISTA
 cont1C=1;
 cont1M=1;
-for u=1:1:length(vASC)    
-    poA=vASC{:,u};
-    figure(3)
-    if cont1C>7
-        cont1C=1;
-    end
-    if cont1M>13
-        cont1M=1;
-    end
-    plot(poA(:,1),poA(:,2),'',poA(:,1),poA(:,2),strcat(all_colors{:,cont1C}),'LineWidth',1)
-    hold on
-    
-    cont1C=cont1C+1;
-    cont1M=cont1M+1;
-end
+% for u=1:1:length(vASC)    
+%     poA=vASC{:,u};
+%     figure(3)
+%     if cont1C>7
+%         cont1C=1;
+%     end
+%     if cont1M>13
+%         cont1M=1;
+%     end
+%     plot(poA(:,1),poA(:,2),'',poA(:,1),poA(:,2),strcat(all_colors{:,cont1C}),'LineWidth',1)
+%     hold on
+%     
+%     cont1C=cont1C+1;
+%     cont1M=cont1M+1;
+% end
 
 %%
 subCB=subChain4(vB,epsilon,p22);
@@ -45,21 +45,21 @@ vBSC=subCB{:,2};
 %% VISTA
 cont1C=1;
 cont1M=1;
-for u=1:1:length(vBSC)
-    poB=vBSC{:,u};
-    figure(4)
-    if cont1C>7
-        cont1C=1;
-    end
-    if cont1M>13
-        cont1M=1;
-    end
-    plot(poB(:,1),poB(:,2),'',poB(:,1),poB(:,2),strcat(all_colors{:,cont1C}),'LineWidth',1)
-    hold on
-    
-    cont1C=cont1C+1;
-    cont1M=cont1M+1;
-end
+% for u=1:1:length(vBSC)
+%     poB=vBSC{:,u};
+%     figure(4)
+%     if cont1C>7
+%         cont1C=1;
+%     end
+%     if cont1M>13
+%         cont1M=1;
+%     end
+%     plot(poB(:,1),poB(:,2),'',poB(:,1),poB(:,2),strcat(all_colors{:,cont1C}),'LineWidth',1)
+%     hold on
+%     
+%     cont1C=cont1C+1;
+%     cont1M=cont1M+1;
+% end
 %% IGUALAR LA DIVIISON DE SUB CADENA DE B->A
 %%
 equalSUB_BA=equalSubChain(vB,p22,esccASC);
@@ -69,41 +69,41 @@ equalSUB_AB=equalSubChain(vA,p11,esccBSC);
 %% VISTA
 cont1C=1;
 cont1M=1;
-for u=1:1:length(equalSUB_BA)
- 
-    poA=equalSUB_BA{:,u};
-    figure(5)
-    if cont1C>7
-        cont1C=1;
-    end
-    if cont1M>13
-        cont1M=1;
-    end
-    plot(poA(:,1),poA(:,2),'',poA(:,1),poA(:,2),strcat(all_colors{:,cont1C}),'LineWidth',1)
-    hold on
-    
-    cont1C=cont1C+1;
-    cont1M=cont1M+1;
-end
+% for u=1:1:length(equalSUB_BA)
+%  
+%     poA=equalSUB_BA{:,u};
+%     figure(5)
+%     if cont1C>7
+%         cont1C=1;
+%     end
+%     if cont1M>13
+%         cont1M=1;
+%     end
+%     plot(poA(:,1),poA(:,2),'',poA(:,1),poA(:,2),strcat(all_colors{:,cont1C}),'LineWidth',1)
+%     hold on
+%     
+%     cont1C=cont1C+1;
+%     cont1M=cont1M+1;
+% end
 %% VISTA
 cont1C=1;
 cont1M=1;
-for u=1:1:length(equalSUB_AB)
-    
-    poB=equalSUB_AB{:,u};   
-    figure(6)
-    if cont1C>7
-        cont1C=1;
-    end
-    if cont1M>13
-        cont1M=1;
-    end
-    plot(poB(:,1),poB(:,2),'',poB(:,1),poB(:,2),strcat(all_colors{:,cont1C}),'LineWidth',1)
-    hold on
-    
-    cont1C=cont1C+1;
-    cont1M=cont1M+1;
-end
+% for u=1:1:length(equalSUB_AB)
+%     
+%     poB=equalSUB_AB{:,u};   
+%     figure(6)
+%     if cont1C>7
+%         cont1C=1;
+%     end
+%     if cont1M>13
+%         cont1M=1;
+%     end
+%     plot(poB(:,1),poB(:,2),'',poB(:,1),poB(:,2),strcat(all_colors{:,cont1C}),'LineWidth',1)
+%     hold on
+%     
+%     cont1C=cont1C+1;
+%     cont1M=cont1M+1;
+% end
 
 %% IGUALAR SEG EN SUB SUB CADENAS DE A->B->A PARA VISUALIZAR
 maxFullS=segByLCM;
@@ -119,39 +119,39 @@ end
 %% VISTA SUB SUB A
 cont3C=1;
 cont3M=1;
-for u=1:1:length(subAN)
-    poAA=subAN{:,u};   
-    figure(7)
-    if cont3C>7
-        cont3C=1;
-    end
-    if cont3M>13
-        cont3M=1;
-    end
-    plot(poAA(:,1),poAA(:,2),'',poAA(:,1),poAA(:,2),strcat(all_colors{:,cont3C}),'LineWidth',1)
-    hold on
-    
-    cont3C=cont3C+1;
-    cont3M=cont3M+1;
-end
+% for u=1:1:length(subAN)
+%     poAA=subAN{:,u};   
+%     figure(7)
+%     if cont3C>7
+%         cont3C=1;
+%     end
+%     if cont3M>13
+%         cont3M=1;
+%     end
+%     plot(poAA(:,1),poAA(:,2),'',poAA(:,1),poAA(:,2),strcat(all_colors{:,cont3C}),'LineWidth',1)
+%     hold on
+%     
+%     cont3C=cont3C+1;
+%     cont3M=cont3M+1;
+% end
 %% VISTA SUB SUB B
 cont4C=1;
 cont4M=1;
-for u=1:1:length(subBN)
-    poBB=subBN{:,u};   
-    figure(8)
-    if cont4C>7
-        cont4C=1;
-    end
-    if cont4M>13
-        cont4M=1;
-    end
-    plot(poBB(:,1),poBB(:,2),'',poBB(:,1),poBB(:,2),strcat(all_colors{:,cont4C}),'LineWidth',1)
-    hold on
-    
-    cont4C=cont4C+1;
-    cont4M=cont4M+1;
-end
+% for u=1:1:length(subBN)
+%     poBB=subBN{:,u};   
+%     figure(8)
+%     if cont4C>7
+%         cont4C=1;
+%     end
+%     if cont4M>13
+%         cont4M=1;
+%     end
+%     plot(poBB(:,1),poBB(:,2),'',poBB(:,1),poBB(:,2),strcat(all_colors{:,cont4C}),'LineWidth',1)
+%     hold on
+%     
+%     cont4C=cont4C+1;
+%     cont4M=cont4M+1;
+% end
 
 %% APICAR SEG EN SUB SUB CADENAS DE A->B
 subBN2={};
@@ -166,39 +166,39 @@ end
 %% VISTA SUB SUB B
 cont5C=1;
 cont5M=1;
-for u=1:1:length(subBN2)
-    poBB2=subBN2{:,u};   
-    figure(9)
-    if cont5C>7
-        cont5C=1;
-    end
-    if cont5M>13
-        cont5M=1;
-    end
-    plot(poBB2(:,1),poBB2(:,2),'',poBB2(:,1),poBB2(:,2),strcat(all_colors{:,cont5C}),'LineWidth',1)
-    hold on
-    
-    cont5C=cont5C+1;
-    cont5M=cont5M+1;
-end
+% for u=1:1:length(subBN2)
+%     poBB2=subBN2{:,u};   
+%     figure(9)
+%     if cont5C>7
+%         cont5C=1;
+%     end
+%     if cont5M>13
+%         cont5M=1;
+%     end
+%     plot(poBB2(:,1),poBB2(:,2),'',poBB2(:,1),poBB2(:,2),strcat(all_colors{:,cont5C}),'LineWidth',1)
+%     hold on
+%     
+%     cont5C=cont5C+1;
+%     cont5M=cont5M+1;
+% end
 %% VISTA SUB SUB A
 cont6C=1;
 cont6M=1;
-for u=1:1:length(subAN2)
-    poAA2=subAN2{:,u};   
-    figure(10)
-    if cont6C>7
-        cont6C=1;
-    end
-    if cont6M>13
-        cont6M=1;
-    end
-    plot(poAA2(:,1),poAA2(:,2),'',poAA2(:,1),poAA2(:,2),strcat(all_colors{:,cont6C}),'LineWidth',1)
-    hold on
-    
-    cont6C=cont6C+1;
-    cont6M=cont6M+1;
-end
+% for u=1:1:length(subAN2)
+%     poAA2=subAN2{:,u};   
+%     figure(10)
+%     if cont6C>7
+%         cont6C=1;
+%     end
+%     if cont6M>13
+%         cont6M=1;
+%     end
+%     plot(poAA2(:,1),poAA2(:,2),'',poAA2(:,1),poAA2(:,2),strcat(all_colors{:,cont6C}),'LineWidth',1)
+%     hold on
+%     
+%     cont6C=cont6C+1;
+%     cont6M=cont6M+1;
+% end
 %% CALCULO SCC A->B
 subANSCC={};
 subBNSCC={};
