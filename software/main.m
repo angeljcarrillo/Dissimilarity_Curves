@@ -95,7 +95,7 @@ avg(end,:)=[]; %% AVERAGE CONTOUR OF BOTH SPECIES
 
     % DISSIMILARITY 
     % ALPHA VALUE
-    alpha=0.5;
+    alpha=0.1;
     J=dissimilarityFF(newVec,alpha);
     %(VECTOR OF CURVES, ALPHA, SEGMENTS, ACCURACY ON CHAIN CODE)
     figure (1)

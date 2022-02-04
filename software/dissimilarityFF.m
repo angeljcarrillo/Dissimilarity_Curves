@@ -4,7 +4,7 @@ function j = dissimilarityFF(vec, alpha)% vector de curvas, alpha, segmentos
  for i=1:1:length(vec)
      alfaM=[];
      for u=1:1:length(vec)
-         alfaM=[alfaM dissimilarityMeasure(vec{:,i},vec{:,u},alpha)];        
+         alfaM=[alfaM dissimilarityMeasureF(vec{:,i},vec{:,u},alpha)];        
      end
       alfa=[alfa; alfaM];     
  end
