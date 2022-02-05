@@ -16,7 +16,7 @@ end
 f(:,1:2)=[];
 
 %% NUMBER OF SEGMENTS
-maxS=100;
+m=100;
 %%
 
 vec={};
@@ -61,7 +61,7 @@ Ie(ind)=1;
 %  axis image
 %  pause(1)
  
- pointlist=optimazeCurve(maxS,C);
+ pointlist=optimazeCurve(m,C);
  pointlist(end,:)=[]; 
  vec={vec{:,:} pointlist}; 
     scc=SCCF(pointlist(:,2),pointlist(:,1),0);  
@@ -88,7 +88,7 @@ persimilis(end,:)=[]; %% AVERAGE CONTOUR PERSIMILIS DELETE TAIL
 %% PLOT ALL CONTOUS BY POINTS
    for j=1:1:length(vec)
        pointlist=vec{:,j};
-       ptD=optimazeCurve(maxS,pointlist);
+       ptD=optimazeCurve(m,pointlist);
        vec2={vec2{:,:} ptD};
 %        figure(1)
 %         plot(ptD(:,1),ptD(:,2),'',ptD(:,1),ptD(:,2),'k-','LineWidth',2.0)
