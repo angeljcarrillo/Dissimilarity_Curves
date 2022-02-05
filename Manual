@@ -1,0 +1,3 @@
+# Demo
+## Manual
+The dissimilarity algorithm proposed can be modified completely, however the principal variables are the number of segments (m) and the threshold for creating a sub-chain of tortuosity epsilon from 0-1.
