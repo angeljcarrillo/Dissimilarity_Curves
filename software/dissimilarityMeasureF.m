@@ -1,4 +1,4 @@
-function omega = dissimilarityMeasureF(U,Z,alfa)
-UZ=dissimilarityMeasure(U,Z,alpha);
-ZU=dissimilarityMeasure(Z,U,alpha);
+function omega = dissimilarityMeasureF(U,Z,EPSILON)
+UZ=dissimilarityMeasure(U,Z,EPSILON);
+ZU=dissimilarityMeasure(Z,U,EPSILON);
 omega=min(UZ,ZU);
