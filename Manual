@@ -1,4 +1,5 @@
 # Demo
 ## Manual
 -Add the dependencies to matlab
--The dissimilarity algorithm proposed can be modified completely, however the principal variables are the number of segments (m) and the threshold for creating a sub-chain of tortuosity epsilon from 0-1.
+-The dissimilarity algorithm proposed can be modified completely
+-The principal variables are the number of segments (m) and the threshold for creating a sub-chain of tortuosity epsilon from 0-1.
