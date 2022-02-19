@@ -1,4 +1,4 @@
-function data=subChainFF(vA,alfa)
+function data=subChainFF(vA,EPSILON)
 subC={};
 chain=[];
 T=0;
@@ -6,7 +6,7 @@ for i=1:1:length(vA)
     
     T=T+sum(abs(vA(:,i)));
     
-    if T<=alfa
+    if T<=EPSILON
         chain=[chain vA(:,i)];
     else
         subC={subC{:,:} chain};
